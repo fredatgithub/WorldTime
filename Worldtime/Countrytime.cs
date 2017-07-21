@@ -4,10 +4,10 @@ namespace Worldtime
 {
   internal class CountryTime
   {
-    public string CityName { get; }
-    public string CountryName { get; }
-    public short TimeShift { get; }
-    public TimeZone CountryTimeZone { get; }
+    private string CityName { get; }
+    private string CountryName { get; }
+    private short TimeShift { get; }
+    private TimeZone CountryTimeZone { get; }
 
     public CountryTime(string cityName, string countryName, short timeShift, TimeZone countryTimeZone)
     {
