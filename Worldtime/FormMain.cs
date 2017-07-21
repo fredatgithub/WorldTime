@@ -22,6 +22,12 @@ namespace Worldtime
     private readonly Dictionary<string, string> _languageDicoFr = new Dictionary<string, string>();
     private string _currentLanguage = "english";
     private ConfigurationOptions _configurationOptions = new ConfigurationOptions();
+    private readonly CountryTime _paris = new CountryTime("Paris", "France", 1, TimeZone.CurrentTimeZone);
+    private readonly CountryTime _londres = new CountryTime("Londres", "UK", 0, TimeZone.CurrentTimeZone);
+    private readonly CountryTime _newYork = new CountryTime("New York", "USA", -6, TimeZone.CurrentTimeZone);
+    private readonly CountryTime _miami = new CountryTime("Miami", "USA", -6, TimeZone.CurrentTimeZone);
+    private readonly CountryTime _losAngeles = new CountryTime("Los Angeles", "USA", -9, TimeZone.CurrentTimeZone);
+    private readonly CountryTime _tokyo = new CountryTime("Tokyo", "Japon", 9, TimeZone.CurrentTimeZone);
 
     private void QuitToolStripMenuItemClick(object sender, EventArgs e)
     {
@@ -714,17 +720,22 @@ namespace Worldtime
 
     private void RefreshClock()
     {
-      LoadCityNames();
+      DisplayCityNames();
+    }
+
+    private void DisplayCityNames()
+    {
+      labelCity1.Text = _paris.ToString();
+      labelCity2.Text = _londres.ToString();
+      labelCity3.Text = _newYork.ToString();
+      labelCity4.Text = _miami.ToString();
+      labelCity5.Text = _losAngeles.ToString();
+      labelCity6.Text = _tokyo.ToString();
     }
 
     private void LoadCityNames()
     {
-      labelCity1.Text = $"Paris {DateTime.Now.ToLongTimeString()}";
-      labelCity2.Text = $"Londres {DateTime.Now.ToLongTimeString()}";
-      labelCity3.Text = $"New York {DateTime.Now.ToLongTimeString()}";
-      labelCity4.Text = $"Miami {DateTime.Now.ToLongTimeString()}";
-      labelCity5.Text = $"Los Angeles {DateTime.Now.ToLongTimeString()}";
-      labelCity6.Text = $"Tokyo {DateTime.Now.ToLongTimeString()}";
+      DisplayCityNames();
     }
   }
 }
