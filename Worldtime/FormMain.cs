@@ -45,6 +45,7 @@ namespace Worldtime
     private void FormMainLoad(object sender, EventArgs e)
     {
       LoadSettingsAtStartup();
+      LoadCityNames();
     }
 
     private void LoadSettingsAtStartup()
@@ -704,6 +705,26 @@ namespace Worldtime
       {
         // do something
       }
+    }
+
+    private void timer1_Tick(object sender, EventArgs e)
+    {
+      RefreshClock();
+    }
+
+    private void RefreshClock()
+    {
+      LoadCityNames();
+    }
+
+    private void LoadCityNames()
+    {
+      labelCity1.Text = $"Paris {DateTime.Now.ToLongTimeString()}";
+      labelCity2.Text = $"Londres {DateTime.Now.ToLongTimeString()}";
+      labelCity3.Text = $"New York {DateTime.Now.ToLongTimeString()}";
+      labelCity4.Text = $"Miami {DateTime.Now.ToLongTimeString()}";
+      labelCity5.Text = $"Los Angeles {DateTime.Now.ToLongTimeString()}";
+      labelCity6.Text = $"Tokyo {DateTime.Now.ToLongTimeString()}";
     }
   }
 }

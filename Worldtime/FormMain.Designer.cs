@@ -28,6 +28,7 @@
     /// </summary>
     private void InitializeComponent()
     {
+      this.components = new System.ComponentModel.Container();
       this.menuStrip1 = new System.Windows.Forms.MenuStrip();
       this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,6 +66,13 @@
       this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
       this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.labelCity1 = new System.Windows.Forms.Label();
+      this.timer1 = new System.Windows.Forms.Timer(this.components);
+      this.labelCity2 = new System.Windows.Forms.Label();
+      this.labelCity3 = new System.Windows.Forms.Label();
+      this.labelCity4 = new System.Windows.Forms.Label();
+      this.labelCity5 = new System.Windows.Forms.Label();
+      this.labelCity6 = new System.Windows.Forms.Label();
       this.menuStrip1.SuspendLayout();
       this.SuspendLayout();
       // 
@@ -81,7 +89,7 @@
       this.menuStrip1.Location = new System.Drawing.Point(0, 0);
       this.menuStrip1.Name = "menuStrip1";
       this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-      this.menuStrip1.Size = new System.Drawing.Size(911, 28);
+      this.menuStrip1.Size = new System.Drawing.Size(491, 28);
       this.menuStrip1.TabIndex = 1;
       this.menuStrip1.Text = "menuStrip1";
       // 
@@ -364,11 +372,83 @@
       this.aboutToolStripMenuItem.Text = "À &propos de...";
       this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItemClick);
       // 
+      // labelCity1
+      // 
+      this.labelCity1.AutoSize = true;
+      this.labelCity1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.labelCity1.Location = new System.Drawing.Point(45, 83);
+      this.labelCity1.Name = "labelCity1";
+      this.labelCity1.Size = new System.Drawing.Size(169, 31);
+      this.labelCity1.TabIndex = 2;
+      this.labelCity1.Text = "City name 1";
+      // 
+      // timer1
+      // 
+      this.timer1.Enabled = true;
+      this.timer1.Interval = 1000;
+      this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+      // 
+      // labelCity2
+      // 
+      this.labelCity2.AutoSize = true;
+      this.labelCity2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.labelCity2.Location = new System.Drawing.Point(45, 137);
+      this.labelCity2.Name = "labelCity2";
+      this.labelCity2.Size = new System.Drawing.Size(169, 31);
+      this.labelCity2.TabIndex = 3;
+      this.labelCity2.Text = "City name 1";
+      // 
+      // labelCity3
+      // 
+      this.labelCity3.AutoSize = true;
+      this.labelCity3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.labelCity3.Location = new System.Drawing.Point(45, 183);
+      this.labelCity3.Name = "labelCity3";
+      this.labelCity3.Size = new System.Drawing.Size(169, 31);
+      this.labelCity3.TabIndex = 4;
+      this.labelCity3.Text = "City name 1";
+      // 
+      // labelCity4
+      // 
+      this.labelCity4.AutoSize = true;
+      this.labelCity4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.labelCity4.Location = new System.Drawing.Point(45, 240);
+      this.labelCity4.Name = "labelCity4";
+      this.labelCity4.Size = new System.Drawing.Size(169, 31);
+      this.labelCity4.TabIndex = 5;
+      this.labelCity4.Text = "City name 1";
+      // 
+      // labelCity5
+      // 
+      this.labelCity5.AutoSize = true;
+      this.labelCity5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.labelCity5.Location = new System.Drawing.Point(45, 291);
+      this.labelCity5.Name = "labelCity5";
+      this.labelCity5.Size = new System.Drawing.Size(169, 31);
+      this.labelCity5.TabIndex = 6;
+      this.labelCity5.Text = "City name 1";
+      // 
+      // labelCity6
+      // 
+      this.labelCity6.AutoSize = true;
+      this.labelCity6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.labelCity6.Location = new System.Drawing.Point(45, 342);
+      this.labelCity6.Name = "labelCity6";
+      this.labelCity6.Size = new System.Drawing.Size(169, 31);
+      this.labelCity6.TabIndex = 7;
+      this.labelCity6.Text = "City name 1";
+      // 
       // FormMain
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(911, 534);
+      this.ClientSize = new System.Drawing.Size(491, 398);
+      this.Controls.Add(this.labelCity6);
+      this.Controls.Add(this.labelCity5);
+      this.Controls.Add(this.labelCity4);
+      this.Controls.Add(this.labelCity3);
+      this.Controls.Add(this.labelCity2);
+      this.Controls.Add(this.labelCity1);
       this.Controls.Add(this.menuStrip1);
       this.MainMenuStrip = this.menuStrip1;
       this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -423,5 +503,12 @@
     private System.Windows.Forms.ToolStripMenuItem SmallToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem MediumToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem LargeToolStripMenuItem;
+    private System.Windows.Forms.Label labelCity1;
+    private System.Windows.Forms.Timer timer1;
+    private System.Windows.Forms.Label labelCity2;
+    private System.Windows.Forms.Label labelCity3;
+    private System.Windows.Forms.Label labelCity4;
+    private System.Windows.Forms.Label labelCity5;
+    private System.Windows.Forms.Label labelCity6;
   }
 }
